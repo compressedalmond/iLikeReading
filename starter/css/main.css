@@ -12,15 +12,15 @@ html {
 
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
-  --primary-200: #c1beff;
-  --primary-300: #a29dff;
-  --primary-400: #837dff;
-  --primary-500: #645cff;
-  --primary-600: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
+  --primary-100: #fff6e6;
+  --primary-200: #fde2ae;
+  --primary-300: #ffd87d;
+  --primary-400: #ffc64c;
+  --primary-500: #ffb031;
+  --primary-600: #ff9615;
+  --primary-700: #ff8400;
+  --primary-800: #a34f00;
+  --primary-900: #522c00;
 
   /* grey */
   --grey-50: #f8fafc;
@@ -263,12 +263,10 @@ Navbar
   display:flex;
   justify-content:center;
   align-items:center;
-  background:blue;
 }
 .nav-center{
   width:90vw;
   max-width:var(--max-width);
-  background:red;
 }
 .nav-header{
   height: 6rem;
@@ -293,6 +291,13 @@ Navbar
   display: flex;
   flex-direction: column;
   /* todo*/
+  height:0;
+  overflow:hidden;
+  transition:var(--transition);
+}
+.show-link{
+  height:310px;
+
 }
 .nav-link{
   display:block;
