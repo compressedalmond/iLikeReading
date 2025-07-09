@@ -461,9 +461,11 @@ Reads
 }
 .recipe-img {
   height: 15rem;
+  width:auto;
+  max-width: 200px;
   border-radius:10px;
   margin-bottom: 1rem;
-  max-width:200px;
+
 }
 .recipe h5 {
   margin-bottom: 0;
@@ -513,6 +515,52 @@ Reads
     font-size: 1.15rem;
   }
 }
+/*
+=============== 
+Error
+===============
+*/
+.error-page{
+  text-align:center;
+  padding-top: 5rem;
+}
+.error-page h1{
+  font-size:9rem;
+
+}
+/*
+=============== 
+About
+===============
+*/
+.about-page h2{
+  text-transform: none;
+  font-weight: bold;
+
+}
+.about-page{
+  display:grid;
+  gap:2rem 4rem;
+  padding-bottom:3rem;
+}
+.about-img{
+  border-radius: var(--borderRadius);
+  height:300px;
+}
+@media screen and (min-width:992px){
+  .about-page{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+  .about-img{
+    height: 100%;
+  }
+}
+.featured-title{
+  text-align: center;
+}
+
 /*
 =============== 
 
