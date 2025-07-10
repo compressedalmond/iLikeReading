@@ -48,7 +48,7 @@ html {
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
   --textColor: var(--grey-900);
-  --borderRadius: 0.25rem;
+  --borderRadius: 0.5rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
@@ -307,6 +307,7 @@ Navbar
   letter-spacing: var(--letterSpacing);
   color: var(--grey-900);
   padding: 1rem 0;
+  margin: 20px;
   border-top: 1px solid var(--grey-500);
   transition: var(--transition);
 }
@@ -360,6 +361,12 @@ Page
   margin: 0 auto;
   padding-top: 2rem;
   min-height: calc(100vh - (6rem + 4rem));
+}
+.page h4{
+  font-weight: 500;
+}
+.page h1{
+  font-weight: 600;
 }
 /*
 =============== 
@@ -442,6 +449,7 @@ Reads
 .tags-container h4 {
   margin-bottom: 0.5rem;
   font-weight: 500;
+
 }
 .tags-list {
   display: grid;
@@ -455,7 +463,7 @@ Reads
   transition: var(--transition);
 }
 .tags-list a:hover {
-  color: var(--primary-500);
+  color: var(--primary-800);
 }
 .recipe {
   display: block;
@@ -466,13 +474,19 @@ Reads
   max-width: 200px;
   border-radius:10px;
   margin-bottom: 1rem;
-
+}
+.recipe-img:hover{
+  scale: 105%;
+  transition: var(--transition);
 }
 .recipe h5 {
   margin-bottom: 0;
   margin-top: 0.25rem;
   line-height: 1;
   color: var(--grey-700);
+}
+.recipe h5:hover{
+  color: var(--primary-700);
 }
 .recipe p {
   margin-bottom: 0;
@@ -541,8 +555,9 @@ About
 }
 .about-page{
   display:grid;
-  gap:2rem 4rem;
+  gap:2rem 10rem;
   padding-bottom:3rem;
+  text-align: center;
 }
 .about-img{
   border-radius: var(--borderRadius);
@@ -601,7 +616,7 @@ Tags Page
   padding:0.75rem 0;
 }
 .tag:hover{
-  background:var(--primary-500);
+  background:var(--primary-800);
 }
 .tag h5, .tag p{
   margin-bottom: 0;
@@ -626,12 +641,17 @@ Single rec
 */
 .rec-hero{
   display: grid;
-  gap: 3rem;
+  gap: 0.1rem;
 }
 .rec-hero-img{
   height: 400px;
   width: auto;
+  margin: auto;
   border-radius: var(--borderRadius);
+  display: grid;
+}
+.rec-hero h2{
+  font-weight: 600;
 }
 .rec-hero p{
   color: var(--grey-600);
@@ -646,6 +666,7 @@ Single rec
 .rec-icons i{
   font-size:1.5rem;
   color: var(--primary-500);
+  
 }
 .rec-icons h5, .rec-icons p {
   margin-bottom: 0;
@@ -681,10 +702,46 @@ Single rec
   }
 }
   
+.rec-content{
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem 5rem;
+  
+}
+@media screen and (min-width:992px) {
+  .rec-content{
+    grid-template-columns: 3fr 2fr;
+  }
+}
+.single-summary header{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.single-summary header p {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary-500);
+  margin-bottom: 0;
+}
+.single-summary > p {
+  color: var(--grey-700);
+}
+
+.single-summary header div {
+  height: 2px;
+  background: var(--grey-300);
+}
+
+.second-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
 /*
 =============== 
 
 ===============
 */
-
-
