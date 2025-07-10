@@ -280,6 +280,7 @@ Navbar
 }
 .nav-header img{
   width:200px;
+
 }
 .nav-btn{
   padding:0.15rem 0.75rem;
@@ -408,7 +409,7 @@ HERO
   font-weight: bolder;
   color:var(--primary-100)
 }
-@media screen and (min-width:768 px) {
+@media screen and (min-width:768px) {
   .hero-text h1{
     font-size:4rem;
     margin-bottom:0;
@@ -563,6 +564,127 @@ About
 
 /*
 =============== 
+Contact Page
+===============
+*/
+.contact-form{
+  width: 100%;
+  margin: 0;
+}
+.contact-container{
+  display: grid;
+  gap:2rem 3rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width:992px) {
+  .contact-container{
+    grid-template-columns:1fr 450px;
+    align-items: center;
+  }
+}
+/*
+=============== 
+Tags Page
+===============
+*/
+.tags-wrapper{
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+.tag{
+  background-color: var(--grey-500);
+  border-radius: var(--borderRadius);
+  text-align: center;
+  color: white;
+  transition: var(--transition);
+  padding:0.75rem 0;
+}
+.tag:hover{
+  background:var(--primary-500);
+}
+.tag h5, .tag p{
+  margin-bottom: 0;
+}
+.tag h5{
+  font-weight: 600;
+}
+@media screen and (min-width:576px) {
+  .tags-wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width:992px) {
+  .tags-wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*
+=============== 
+Single rec
+===============
+*/
+.rec-hero{
+  display: grid;
+  gap: 3rem;
+}
+.rec-hero-img{
+  height: 400px;
+  width: auto;
+  border-radius: var(--borderRadius);
+}
+.rec-hero p{
+  color: var(--grey-600);
+}
+.rec-icons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.rec-icons i{
+  font-size:1.5rem;
+  color: var(--primary-500);
+}
+.rec-icons h5, .rec-icons p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.rec-icons p {
+  color: var(--grey-600);
+}
+.rec-tags{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.rec-tags a{
+  background-color: var(--primary-500);
+  border-radius: var(--borderRadius);
+  color: white;
+  padding: 0.05rem 0.5rem;
+  margin: 0 0.3rem;
+  text-transform: capitalize;
+}
+@media screen and (min-width:576px) {
+  .tags-wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width:992px) {
+  .rec-hero{
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+}
+  
+/*
+=============== 
 
 ===============
 */
+
+
