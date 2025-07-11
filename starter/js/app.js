@@ -21,21 +21,65 @@ date.textContent= currentYear
 
 
 const books = [
-  {"title": "One Piece", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/3MzEO.png", "desc": "This is one piece"},
-  {"title": "Dr. Stone", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "desc": "This is dr stone"},
-  {"title": "Jojo's Bizzare Adventure", "dateOfRelease": "1983","imageLink":"https://meo.comick.pictures/0ZoyRk.jpg"}
+  {"title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type":"Manga|",
+  "desc": "This is one piece", "author": "Eiichiro Oda", "dateOfRelease": "1999", "status":"Ongoing",
+"summary": "BLAHHHH", "comments":"meow meow"},
+  {"title": "Dr. Stone", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "type":"hehe",
+  "desc": "This is dr stone", "author": "Boiichi", "dateOfRelease": "202?", "status":"Complete",
+"summary": "BLeAHHHH", "comments":"meow meow"},
+
+
+
+
+
+
 ]
 
+
+
 if (window.location.href.includes("index")){
+  const homeBooks = document.getElementById("homeBooks");
   books.forEach(book => {
-    const homeBooks = document.getElementById("homeBooks");
-
-    const title = document.createElement("a");
-    title.innerText = book["title"];
-
-    homeBooks.appendChild(title);
+    const atag = document.createElement("a");  
+    atag.href=`single-recipe.html?title=${book["title"]}`
+    const imagetag = document.createElement("img");  
+    const h5tag = document.createElement("h5"); 
+    const ptag = document.createElement("p");   
+    h5tag.innerText = book["title"];
+    ptag.innerText=book["type"]
+    imagetag.src=book["imageLink"]
+    imagetag.alt="book"
+    imagetag.className="img recipe-img"
+    atag.className="recipe"
+atag.appendChild(imagetag)
+atag.appendChild(h5tag)
+atag.appendChild(ptag)
+    homeBooks.appendChild(atag);
   });
 }
+
+
+if (window.location.href.includes("recommendations")){
+  const homeBooks = document.getElementById("list");
+  books.forEach(book => {
+    const atag = document.createElement("a");  
+    atag.href=`single-recipe.html?title=${book["title"]}`
+    const imagetag = document.createElement("img");  
+    const h5tag = document.createElement("h5"); 
+    const ptag = document.createElement("p");   
+    h5tag.innerText = book["title"];
+    ptag.innerText=book["type"]
+    imagetag.src=book["imageLink"]
+    imagetag.alt="book"
+    imagetag.className="img recipe-img"
+    atag.className="recipe"
+atag.appendChild(imagetag)
+atag.appendChild(h5tag)
+atag.appendChild(ptag)
+    homeBooks.appendChild(atag);
+  });
+}
+
 
 if (window.location.href.includes("single-recipe")){
   const params = new URLSearchParams(window.location.search);
@@ -45,9 +89,13 @@ if (window.location.href.includes("single-recipe")){
     if(book["title"] === title){
       document.getElementById("title").innerText = book["title"];
       document.getElementById("imageRec").src = book["imageLink"];
+     
       document.getElementById("desc").innerText = book["desc"];
-
-
+      document.getElementById("author").innerText = book["author"];
+      document.getElementById("dateOfRelease").innerText = book["dateOfRelease"];
+      document.getElementById("status").innerText = book["status"];
+      document.getElementById("summary").innerText = book["summary"];
+      document.getElementById("comments").innerText = book["comments"];
       return;
     }
   });
