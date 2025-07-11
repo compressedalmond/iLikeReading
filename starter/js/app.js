@@ -21,6 +21,7 @@ date.textContent= currentYear
 
 
 const books = [
+<<<<<<< HEAD
   {"title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type":"Manga|",
   "desc": "This is one piece", "author": "Eiichiro Oda", "dateOfRelease": "1999", "status":"Ongoing",
 "summary": "BLAHHHH", "comments":"meow meow"},
@@ -81,6 +82,24 @@ atag.appendChild(ptag)
 }
 
 
+=======
+  {"title": "One Piece", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/3MzEO.png", "desc": "This is one piece"},
+  {"title": "Dr. Stone", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "desc": "This is dr stone"},
+  {"title": "Jojo's Bizzare Adventure", "dateOfRelease": "1983"}
+]
+
+if (window.location.href.includes("index")){
+  books.forEach(book => {
+    const homeBooks = document.getElementById("homeBooks");
+
+    const title = document.createElement("a");
+    title.innerText = book["title"];
+
+    homeBooks.appendChild(title);
+  });
+}
+
+>>>>>>> 938eb62f956b18bce27d9fb0e2dbc7776f7d41bb
 if (window.location.href.includes("single-recipe")){
   const params = new URLSearchParams(window.location.search);
   const title = params.get("title");
@@ -89,6 +108,7 @@ if (window.location.href.includes("single-recipe")){
     if(book["title"] === title){
       document.getElementById("title").innerText = book["title"];
       document.getElementById("imageRec").src = book["imageLink"];
+<<<<<<< HEAD
      
       document.getElementById("desc").innerText = book["desc"];
       document.getElementById("author").innerText = book["author"];
@@ -100,3 +120,12 @@ if (window.location.href.includes("single-recipe")){
     }
   });
 } 
+=======
+      document.getElementById("desc").innerText = book["desc"];
+
+
+      return;
+    }
+  });
+} 
+>>>>>>> 938eb62f956b18bce27d9fb0e2dbc7776f7d41bb
