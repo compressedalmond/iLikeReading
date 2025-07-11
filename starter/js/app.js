@@ -23,7 +23,7 @@ date.textContent= currentYear
 const books = [
   {"title": "One Piece", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/3MzEO.png", "desc": "This is one piece"},
   {"title": "Dr. Stone", "dateOfRelease": "1999", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "desc": "This is dr stone"},
-  {"title": "Jojo's Bizzare Adventure", "dateOfRelease": "1983"}
+  {"title": "Jojo's Bizzare Adventure", "dateOfRelease": "1983","imageLink":"https://meo.comick.pictures/0ZoyRk.jpg"}
 ]
 
 if (window.location.href.includes("index")){
