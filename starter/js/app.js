@@ -76,7 +76,7 @@ const books = [
   { "title": "Castle Swimmer", "imageLink": "https://meo.comick.pictures/1K6bD.jpg", "type": "Webtoon | 150", "desc": "", "author": "Wendy Lian Martin", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
  { "title": "Unordinary", "imageLink": "https://meo.comick.pictures/aOBbOK.jpg", "type": "Webtoon | 300", "desc": "", "author": "uru-chan", "dateOfRelease": "2016", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
 
-  { "title": "Cursed Princess Club", "imageLink": "https://m.media-amazon.com/images/I/81Bj9pG4T9L.jpg", "type": "Webtoon | 150", "desc": "", "author": "LambCat", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Cursed Princess Club", "imageLink": "", "type": "Webtoon= | 150", "desc": "", "author": "LambCat", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "My Deepest Secret", "imageLink": "", "type": "Manhwa | 100", "desc": "", "author": "Hanza Art", "dateOfRelease": "2019", "status": "Completed", "summary": "", "comments": "", "tags": "" },
   { "title": "She's Hopeless", "imageLink": "", "type": "Manhwa | 50", "desc": "", "author": "Jangbi (art by Gyeol)", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Homesick", "imageLink": "", "type": "Manhwa | 50", "desc": "", "author": "Ms. Freaky", "dateOfRelease": "2019", "status": "Completed", "summary": "", "comments": "", "tags": "" },
@@ -195,3 +195,97 @@ if (window.location.href.includes("single-recipe")){
     }
   });
 } 
+
+function calcGenreAmount(){
+  const usedGenres = {};
+
+  books.forEach(book => {
+    if (book.tags != undefined){
+      const genres = book.tags.split(" ");
+      genres.forEach(genre => {
+        if (!usedGenres[genre]) {
+          usedGenres[genre] = 1;
+        } else {
+          usedGenres[genre] += 1;
+        }
+      });
+    }
+  });
+
+  return usedGenres;
+}
+
+if (window.location.href.includes("tags")){
+  const recList = document.getElementById("recList");
+
+  const usedGenres = calcGenreAmount()
+  Object.keys(usedGenres).forEach(genre => {
+    const aTag = document.createElement("a");
+    aTag.className = "tag"
+    aTag.href = `tag-template.html?genre=${genre}`
+    const h5 = document.createElement("h5");
+    const pTag = document.createElement("p");
+
+    h5.innerText = genre;
+    usedGenres[genre] === 1 ? pTag.innerText = usedGenres[genre] + " rec" : pTag.innerText = usedGenres[genre] + " recs"
+
+
+    aTag.appendChild(h5);
+    aTag.appendChild(pTag);
+
+    recList.appendChild(aTag);
+  });
+
+}
+
+if (window.location.href.includes("recommendations") || window.location.href.includes("index")){
+  const recSide = document.getElementById("recSideBar");
+  const usedGenres = calcGenreAmount();
+
+  Object.keys(usedGenres).forEach(genre => {
+    const aTag = document.createElement("a");
+    aTag.innerText = genre + "(" + usedGenres[genre] + ")";
+    aTag.href = `tag-template.html?genre=${genre}`;
+
+
+    recSide.appendChild(aTag)
+  });
+}
+
+if (window.location.href.includes("tag-template")){
+  const params = new URLSearchParams(window.location.search);
+  const genre = params.get("genre");
+  const tagHomePage = document.getElementById("tagHomePage")
+
+  const genreType=document.getElementById("genreType");
+  genreType.innerText = genre;
+
+  books.forEach(book => {
+    if (book.tags === undefined){
+      return;
+    }
+    if (book.tags.includes(genre)){
+      const aTag = document.createElement("a");
+      aTag.className = "tag"
+      aTag.href = `single-recipe.html?title=${book.title}`
+      aTag.className = "recipe";
+      const img = document.createElement("img");
+      img.src = book.imageLink;
+      img.alt="read" 
+      img.className ="img recipe-img"
+      const h5 = document.createElement("h5");
+      const pTag = document.createElement("p");
+
+      h5.innerText = book.title;
+      pTag.innerText = book.type;
+
+      aTag.appendChild(img);
+      aTag.appendChild(h5);
+      aTag.appendChild(pTag);
+      tagHomePage.appendChild(aTag);
+    }
+  });
+}
+
+
+
