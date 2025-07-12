@@ -23,9 +23,9 @@ date.textContent= currentYear
 const books = [
 
 
-  { "title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type": "Manga | 1150", "desc": "", "author": "Eiichiro Oda", "dateOfRelease": "1997", "status": "Ongoing", "summary": "", "comments": "" },
-  { "title": "Dr. Stone", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "type": "Manga | 250", "desc": "", "author": "Riichirō Inagaki & Boichi", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "" },
-  { "title": "Spy x Family", "imageLink": "https://meo.comick.pictures/pVDV1.jpg", "type": "Manga | 150", "desc": "", "author": "Tatsuya Endo", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "" },
+  { "title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type": "Manga | 1150", "desc": "", "author": "Eiichiro Oda", "dateOfRelease": "1997", "status": "Ongoing", "summary": "", "comments": "", "tags": "action" },
+  { "title": "Dr. Stone", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "type": "Manga | 250", "desc": "", "author": "Riichirō Inagaki & Boichi", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "", "tags": "mystery action"},
+  { "title": "Spy x Family", "imageLink": "https://meo.comick.pictures/pVDV1.jpg", "type": "Manga | 150", "desc": "", "author": "Tatsuya Endo", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "", "tags": "humor"},
   { "title": "One Punch Man", "imageLink": "https://meo.comick.pictures/lalkm.jpg", "type": "Manga | 200", "desc": "", "author": "ONE & Yūsuke Murata", "dateOfRelease": "2012", "status": "Ongoing", "summary": "", "comments": "" },
   { "title": "Jujutsu Kaisen", "imageLink": "https://meo.comick.pictures/KrgKwn.jpg", "type": "Manga | 200", "desc": "", "author": "Gege Akutami", "dateOfRelease": "2018", "status": "Completed", "summary": "", "comments": "" },
   { "title": "Berserk", "imageLink": "https://meo.comick.pictures/zgyM3.jpg", "type": "Manga | 400", "desc": "", "author": "Kentaro Miura (& Studio Gaga)", "dateOfRelease": "1989", "status": "Ongoing", "summary": "", "comments": "" },
@@ -82,9 +82,9 @@ if (window.location.href.includes("index")){
     imagetag.alt="book"
     imagetag.className="img recipe-img"
     atag.className="recipe"
-atag.appendChild(imagetag)
-atag.appendChild(h5tag)
-atag.appendChild(ptag)
+    atag.appendChild(imagetag)
+    atag.appendChild(h5tag)
+    atag.appendChild(ptag)
     homeBooks.appendChild(atag);
   });
 }
@@ -104,9 +104,9 @@ if (window.location.href.includes("recommendations")){
     imagetag.alt="book"
     imagetag.className="img recipe-img"
     atag.className="recipe"
-atag.appendChild(imagetag)
-atag.appendChild(h5tag)
-atag.appendChild(ptag)
+    atag.appendChild(imagetag)
+    atag.appendChild(h5tag)
+    atag.appendChild(ptag)
     homeBooks.appendChild(atag);
   });
 }
@@ -130,3 +130,95 @@ if (window.location.href.includes("single-recipe")){
     }
   });
 } 
+
+function calcGenreAmount(){
+  const usedGenres = {};
+
+  books.forEach(book => {
+    if (book.tags != undefined){
+      const genres = book.tags.split(" ");
+      genres.forEach(genre => {
+        if (!usedGenres[genre]) {
+          usedGenres[genre] = 1;
+        } else {
+          usedGenres[genre] += 1;
+        }
+      });
+    }
+  });
+
+  return usedGenres;
+}
+
+if (window.location.href.includes("tags")){
+  const recList = document.getElementById("recList");
+  
+  const usedGenres = calcGenreAmount()
+  Object.keys(usedGenres).forEach(genre => {
+    const aTag = document.createElement("a");
+    aTag.className = "tag"
+    aTag.href = `tag-template.html?genre=${genre}`
+    const h5 = document.createElement("h5");
+    const pTag = document.createElement("p");
+
+    h5.innerText = genre;
+    usedGenres[genre] === 1 ? pTag.innerText = usedGenres[genre] + " rec" : pTag.innerText = usedGenres[genre] + " recs"
+    
+
+    aTag.appendChild(h5);
+    aTag.appendChild(pTag);
+
+    recList.appendChild(aTag);
+  });
+     
+}
+
+if (window.location.href.includes("recommendations") || window.location.href.includes("index")){
+  const recSide = document.getElementById("recSideBar");
+  const usedGenres = calcGenreAmount();
+
+  Object.keys(usedGenres).forEach(genre => {
+    const aTag = document.createElement("a");
+    aTag.innerText = genre + "(" + usedGenres[genre] + ")";
+    aTag.href = `tag-template.html?genre=${genre}`;
+
+
+    recSide.appendChild(aTag)
+  });
+}
+
+
+if (window.location.href.includes("tag-template")){
+  const params = new URLSearchParams(window.location.search);
+  const genre = params.get("genre");
+  const tagHomePage = document.getElementById("tagHomePage")
+
+  const genreType=document.getElementById("genreType");
+  genreType.innerText = genre;
+
+  books.forEach(book => {
+    if (book.tags === undefined){
+      return;
+    }
+    if (book.tags.includes(genre)){
+      const aTag = document.createElement("a");
+      aTag.className = "tag"
+      aTag.href = `single-recipe.html?title=${book.title}`
+      aTag.className = "recipe";
+      const img = document.createElement("img");
+      img.src = book.imageLink;
+      img.alt="read" 
+      img.className ="img recipe-img"
+      const h5 = document.createElement("h5");
+      const pTag = document.createElement("p");
+      
+      h5.innerText = book.title;
+      pTag.innerText = book.type;
+
+      aTag.appendChild(img);
+      aTag.appendChild(h5);
+      aTag.appendChild(pTag);
+      tagHomePage.appendChild(aTag);
+    }
+  });
+}
