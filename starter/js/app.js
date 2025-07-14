@@ -59,6 +59,8 @@ const books = [
   { "title": "Haikyu!!", "imageLink": "https://meo.comick.pictures/O8kRNO.jpg", "type": "Manga | 400", "desc": "", "author": "Haruichi Furudate", "dateOfRelease": "2011", "status": "Completed", "summary": "", "comments":"", "tags": "sports action comedy" },
   { "title": "Made in Abyss", "imageLink": "https://meo.comick.pictures/10BWD.jpg", "type": "Manga | 100", "desc": "", "author": "Akihito Tsukushi", "dateOfRelease": "2012", "status": "Ongoing", "summary": "", "comments":"", "tags": "drama fantasy mystery thriller adventure" },
   { "title": "Gachiakuta", "imageLink": "https://meo.comick.pictures/GXZxr7.jpg", "type": "Manga | 50", "desc": "", "author": "Kei Urana", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments":"", "tags": "action adventure sci-fi" },
+  { "title": "Dandadan", "imageLink": "https://meo.comick.pictures/w7X6q7.jpg", "type": "Manga | 200", "desc": "", "author": "Yukinobu Tatsu", "dateOfRelease": "2021", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+
 
   { "title": "Sweet Home", "imageLink": "https://meo.comick.pictures/Goko6.jpg", "type": "Manhwa | 150", "desc": "", "author": "Carnby Kim & Youngchan Hwang", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "", "tags": "sci-fi action drama thriller horror mystery" },
   { "title": "Omniscient Reader's Viewpoint", "imageLink": "https://meo.comick.pictures/p7j8l.jpg", "type": "Manhwa | 200", "desc": "", "author": "Sing Shong (adapted by Sleepy-C, art by Redice Studio)", "dateOfRelease": "2020", "status": "Ongoing", "summary": "", "comments": "", "tags": "adventure action fantasy drama isekai" },
@@ -93,6 +95,14 @@ const books = [
   { "title": "Special Civil Servant", "imageLink": "https://meo.comick.pictures/oam1Z4.jpg", "type": "Manhwa | 100", "desc": "", "author": "Na Yoonseok", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Revenge of the Baskerville Bloodhound", "imageLink": "https://meo.comick.pictures/N6n5Xz.jpg", "type": "Manhwa | 50", "desc": "", "author": "Zec", "dateOfRelease": "2023", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Life of a Quack Healer", "imageLink": "https://meo.comick.pictures/gO4E8-s.jpg", "type": "Manhwa | 50", "desc": "", "author": "Dubi & Lico", "dateOfRelease": "2023", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Untouchable", "imageLink": "https://meo.comick.pictures/kRXjbJ.jpg", "type": "Manhwa | 150", "desc": "", "author": "massstar", "dateOfRelease": "2014", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  { "title": "Maybe Meant To Be", "imageLink": "https://meo.comick.pictures/2NRb7Z.png", "type": "Manhwa | 50", "desc": "", "author": "Taejun Park", "dateOfRelease": "2022", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  { "title": "Villain To Kill", "imageLink": "https://meo.comick.pictures/v8pMmy.jpg", "type": "Manhwa | 100", "desc": "", "author": "D.P & Min Wook So", "dateOfRelease": "2020", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Genius Archer's Livestreaming", "imageLink": "https://meo.comick.pictures/5pq0ep.png", "type": "Manhwa | 50", "desc": "", "author": "Ha johan", "dateOfRelease": "2023", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Inso's Law", "imageLink": "https://meo.comick.pictures/ERoWe.jpg", "type": "Manhwa | 150", "desc": "", "author": "Yoo Seo Jung", "dateOfRelease": "2020", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  { "title": "He Can't Be This Dumb", "imageLink": "https://meo.comick.pictures/KYQN4.jpg", "type": "Manhwa | 50", "desc": "", "author": "Yuto", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Famous Restaurant", "imageLink": "https://meo.comick.pictures/ez28bX.jpg", "type": "Manhwa | 50", "desc": "", "author": "Yoo Rin", "dateOfRelease": "2021", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Dreaming Freedom", "imageLink": "https://meo.comick.pictures/gqyJR.jpg", "type": "Manhwa | 50", "desc": "", "author": "Pilgyoung", "dateOfRelease": "2023", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Surviving the Game as a Berserker", "imageLink": "https://meo.comick.pictures/Zq2Yv.jpg", "type": "Manhwa | 100", "desc": "", "author": "Jin Seolwoo (art by Hong Daeui)", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Eleceed", "imageLink": "https://meo.comick.pictures/zlzOj.jpg", "type": "Manhwa | 250", "desc": "", "author": "Son Jeho & ZHENA", "dateOfRelease": "2018", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Our Secret Alliance", "imageLink": "https://meo.comick.pictures/pw1v3.jpg", "type": "Manhwa | 50", "desc": "", "author": "Miryang & Toyou's Dream", "dateOfRelease": "2022", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
@@ -121,10 +131,12 @@ const books = [
   { "title": "Brass & Sass", "imageLink": "https://static.usagi.one/uploads/pics/01/29/755.jpg", "type": "Webtoon | 50", "desc": "", "author": "Antlerella", "dateOfRelease": "2019", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "School Bus Graveyard", "imageLink": "https://meo.comick.pictures/X8X76M.png", "type": "Webtoon | 100", "desc": "", "author": "JackieE", "dateOfRelease": "2018", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Morgana & Oz", "imageLink": "https://meo.comick.pictures/P0dSACHe0ZkHX.webp", "type": "Webtoon | 50", "desc": "", "author": "Meryl Patton", "dateOfRelease": "2020", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "I'm The Grim Reaper", "imageLink": "https://prodimage.images-bn.com/pimages/9781974739080_p0_v2_s1200x630.jpg", "type": "Webtoon | 100", "desc": "", "author": "Jeo Seongmin", "dateOfRelease": "2021", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
+  { "title": "Purple Hyacinth", "imageLink": "https://meo.comick.pictures/87djn.jpg", "type": "Webtoon | 200", "desc": "", "author": "Ephemerys", "dateOfRelease": "2019", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  { "title": "I Love Yoo", "imageLink": "https://i.redd.it/g2ecyjfker961.jpg", "type": "Webtoon | 250", "desc": "", "author": "Quimchee", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+
+  
 ]
-
-
-
 
 
 
@@ -191,6 +203,7 @@ if (window.location.href.includes("single-recipe")){
     }
   });
 } 
+
 
 function calcGenreAmount(){
   const usedGenres = {};
