@@ -670,7 +670,9 @@ Single rec
 */
 .rec-hero{
   display: grid;
-  gap: 0.1rem;
+  gap: 0.1rem; 
+  padding-bottom: 50px;
+  border-bottom:2px solid #0f172a;
 }
 .rec-hero-img{
   height: 400px;
@@ -678,6 +680,8 @@ Single rec
   margin: auto;
   border-radius: var(--borderRadius);
   display: grid;
+  box-shadow: 0 4px 6px 0 #7dbbc3, 0 6px 10px 0 #7dbbc3;
+  
 }
 .rec-hero-img:hover{
   scale: 110%;
@@ -685,10 +689,16 @@ Single rec
   transition: var(--transition);
 }
 .rec-hero h2{
-  font-weight: 600;
+  font-weight: 800;
+  text-align: center;
+  
+
 }
 .rec-hero p{
-  color: var(--grey-600);
+  color: var(--primary-800);
+  font-weight: 550;
+  font-size: 30px;
+  text-align: center;
 }
 .rec-icons{
   display: grid;
@@ -703,11 +713,12 @@ Single rec
   
 }
 .rec-icons h5, .rec-icons p {
-  margin-bottom: 0;
+  margin-bottom: 2px;
   font-size: 0.85rem;
 }
 .rec-icons p {
   color: var(--grey-600);
+  padding-bottom: 20px;
 }
 .rec-tags{
   display: flex;
@@ -745,9 +756,13 @@ Single rec
   gap: 2rem 5rem;
   
 }
+.rec-content h4{
+  color: var(--primary-800);
+  font-weight: 500;
+}
 @media screen and (min-width:992px) {
   .rec-content{
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 3fr;
   }
 }
 .single-summary header{
@@ -763,7 +778,7 @@ Single rec
   color: var(--primary-500);
   margin-bottom: 0;
 }
-.single-summary > p {
+.single-summary p {
   color: var(--grey-700);
 }
 
@@ -776,7 +791,9 @@ Single rec
   display: grid;
   row-gap: 2rem;
 }
-
+.second-column p{
+  color: var(--grey-700);
+}
 /*
 =============== 
 

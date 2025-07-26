@@ -23,9 +23,9 @@ date.textContent= currentYear
 const books = [
 
 
-  { "title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type": "Manga | 1150", "desc": "34", "author": "Eiichiro Oda", "dateOfRelease": "1997", "status": "Ongoing",
-     "summary": "", 
-     "comments": "", "tags": "action adventure fantasy comedy" },
+  { "title": "One Piece", "imageLink": "https://meo.comick.pictures/3MzEO.png", "type": "Manga | 1150", "desc": "35", "author": "Eiichiro Oda", "dateOfRelease": "1997", "status": "Ongoing",
+     "summary": "Pirates but goated", 
+     "comments": "MY FAVORITE MANGA OAT! Ik its over 1000 chaps but I legitamately wish it was longer. Carried me through covid", "tags": "action adventure fantasy comedy" },
   { "title": "Dr. Stone", "imageLink": "https://meo.comick.pictures/0ZoyRk.jpg", "type": "Manga | 250", "desc": "", "author": "Riichirō Inagaki & Boichi", "dateOfRelease": "2017", "status": "Completed", 
     "summary": "", 
     "comments": "", "tags": "mystery action sci-fi adventure fantasy"},
