@@ -134,6 +134,9 @@ const books = [
   { "title": "I'm The Grim Reaper", "imageLink": "https://prodimage.images-bn.com/pimages/9781974739080_p0_v2_s1200x630.jpg", "type": "Webtoon | 100", "desc": "", "author": "Jeo Seongmin", "dateOfRelease": "2021", "status": "Ongoing", "summary": "", "comments": "", "tags": "" },
   { "title": "Purple Hyacinth", "imageLink": "https://meo.comick.pictures/87djn.jpg", "type": "Webtoon | 200", "desc": "", "author": "Ephemerys", "dateOfRelease": "2019", "status": "Completed", "summary": "", "comments": "", "tags": "" },
   { "title": "I Love Yoo", "imageLink": "https://i.redd.it/g2ecyjfker961.jpg", "type": "Webtoon | 250", "desc": "", "author": "Quimchee", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  { "title": "I Love Yoo", "imageLink": "https://i.redd.it/g2ecyjfker961.jpg", "type": "Webtoon | 250", "desc": "", "author": "Quimchee", "dateOfRelease": "2017", "status": "Completed", "summary": "", "comments": "", "tags": "" },
+  
+  
 
   
 ]
