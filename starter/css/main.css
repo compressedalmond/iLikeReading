@@ -519,6 +519,9 @@ Reads
 .recipe h5:hover{
   color: var(--primary-700);
 }
+.recipe h6{
+  text-align: right;
+}
 .recipe p {
   text-align: center;
   font-size:18px ;
@@ -684,6 +687,13 @@ Tags Page
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.recipes-list h5{
+  text-align: center;
+}
+.recipes-list p {
+  text-align: center;
+}
+
 /*
 =============== 
 Single rec
