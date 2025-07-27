@@ -591,15 +591,28 @@ About
   font-weight: bold;
 
 }
+
+.about-page p a{
+  padding: 8px;
+  border: 3px dotted var(--primary-400);
+  font-size: larger;
+  background-color: var(--primary-800);
+  border-radius: var(--borderRadius);
+  color: white;
+    box-shadow: 3px 4px 4px 0 #7dbbc3, 0 4px 7px 0 #7dbbc3;
+}
+
 .about-page{
+  padding-top: 7rem;
   display:grid;
-  gap:2rem 10rem;
-  padding-bottom:3rem;
+  gap:2rem 5rem;
+  padding-bottom:2rem;
   text-align: center;
 }
 .about-img{
   border-radius: var(--borderRadius);
   height:300px;
+  margin: auto;
 }
 @media screen and (min-width:992px){
   .about-page{
@@ -609,11 +622,10 @@ About
   }
   .about-img{
     height: 100%;
+    margin: 1px;
   }
 }
-.featured-title{
-  text-align: center;
-}
+
 
 /*
 =============== 
@@ -690,7 +702,7 @@ Single rec
   margin-bottom: 50px;
   border-radius: var(--borderRadius);
   display: grid;
-  box-shadow: 0 4px 6px 0 #7dbbc3, 0 6px 10px 0 #7dbbc3;
+  box-shadow: 3px 4px 6px 0 #7dbbc3, 0 6px 10px 0 #7dbbc3;
   
 }
 .rec-hero-img:hover{
