@@ -370,14 +370,12 @@ const books = [
 
   
 ]
-
-
+//dark mode
   window.onload = function () {
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
     }
   }
-
   function toggleMode() {
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
@@ -386,6 +384,24 @@ const books = [
       localStorage.setItem('theme', 'light');
     }
   }
+
+//random rec
+document.addEventListener("DOMContentLoaded", () => {
+  const randomBtn = document.getElementById("randomize-btn");
+
+  if (randomBtn) {
+    randomBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (!books || books.length === 0) {
+        console.error("Book list is empty or undefined.");
+        return;
+      }
+      const randomBook = books[Math.floor(Math.random() * books.length)];
+      window.location.href = `single-recipe.html?title=${encodeURIComponent(randomBook.title)}`;
+    });
+  }
+});
+
 
 if (window.location.href.includes("index")){
   const homeBooks = document.getElementById("homeBooks");
