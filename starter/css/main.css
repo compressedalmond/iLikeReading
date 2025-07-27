@@ -70,8 +70,38 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
+  background-color: floralwhite;
+}
+.toggle-btn {
+  position: relative;
+  margin-left: 13rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+body.dark{
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark a{
+  color: #cde8ff;
 }
 
+body.dark footer{
+  color:#aaa;
+  border-top: 1px solid #333;
+}
+
+body.dark nav{
+  border-bottom: 1px solid #333;
+}
+body.dark .toggle-btn{
+  background-color: #333;
+  color: #fff;
+}
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -380,6 +410,7 @@ Page
   margin: 0 auto;
   padding-top: 2rem;
   min-height: calc(100vh - (6rem + 4rem));
+
 }
 .page h4{
   font-weight: 500;

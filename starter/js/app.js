@@ -372,7 +372,9 @@ const books = [
 ]
 
 
-
+function toggleMode() {
+  document.body.classList.toggle('dark');
+}
 
 if (window.location.href.includes("index")){
   const homeBooks = document.getElementById("homeBooks");
@@ -486,6 +488,7 @@ if (window.location.href.includes("tags")){
   });
 
 }
+
 
 if (window.location.href.includes("recommendations") || window.location.href.includes("index")){
   const recSide = document.getElementById("recSideBar");
