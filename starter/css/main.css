@@ -98,7 +98,6 @@ body {
 body.dark{
   background-color: #121212;
   color: floralwhite;
-  transition: var(--transition);
 }
 body.dark a{
   color: var(--primary-800);
