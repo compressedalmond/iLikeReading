@@ -780,6 +780,7 @@ Single rec
 }
 .rec-hero-img{
   height: 400px;
+  max-width:280px;
   width: auto;
   margin: auto;
   margin-bottom: 50px;
@@ -788,6 +789,8 @@ Single rec
   box-shadow: 3px 4px 6px 0 #7dbbc3, 0 6px 10px 0 #7dbbc3;
   
 }
+
+
 .rec-hero-img:hover{
   scale: 110%;
   transform: rotateY(359deg);
