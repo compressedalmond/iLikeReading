@@ -605,7 +605,9 @@ if (window.location.href.includes("recommendations")) {
 if (window.location.href.includes("single-recipe")){
   const params = new URLSearchParams(window.location.search);
   const title = params.get("title");
- 
+
+  const tagsList = document.getElementById('bookTags');
+
   books.forEach(book => {
     if(book["title"] === title){
       document.getElementById("title").innerText = book["title"];
@@ -616,6 +618,16 @@ if (window.location.href.includes("single-recipe")){
       document.getElementById("status").innerText = book["status"];
       document.getElementById("summary").innerText = book["summary"];
       document.getElementById("comments").innerText = book["comments"];
+
+      book["tags"].split(" ").forEach(tag => {
+        const tagLink = document.createElement("a");
+        tagLink.href = `tag-template.html?genre=${tag}`;
+        tagLink.innerText = tag.toLowerCase();
+        tagLink.innerText[0].toUpperCase();
+
+        tagsList.appendChild(tagLink);
+      });
+
       return;
     }
   });
@@ -661,7 +673,6 @@ if (window.location.href.includes("tags")){
 
     recList.appendChild(aTag);
   });
-
 }
 
 
