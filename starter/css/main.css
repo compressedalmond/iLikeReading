@@ -147,7 +147,6 @@ End Toggle Button
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  max-width: 40em;
 }
 
 h1,
@@ -386,7 +385,7 @@ Navbar
   transition:var(--transition);
 }
 .show-links{
-  height:310px;
+  height:410px;
 
 }
 .nav-link{
@@ -663,9 +662,8 @@ About
 ===============
 */
 .about-page h2{
-  text-transform: none;
   font-weight: bold;
-
+  text-align: center;
 }
 
 .about-page p a{
@@ -674,12 +672,20 @@ About
   font-size: larger;
   background-color: var(--primary-800);
   border-radius: var(--borderRadius);
+  margin: auto;
   color: white;
     box-shadow: 3px 4px 4px 0 #7dbbc3, 0 4px 7px 0 #7dbbc3;
 }
+.about-page p {
+  text-align: center;
+  max-width: 50em;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 
 .about-page{
-  padding-top: 7rem;
+  margin: auto;
+  padding-top: 2rem;
   display:grid;
   gap:2rem 5rem;
   padding-bottom:2rem;
@@ -689,11 +695,12 @@ About
   border-radius: var(--borderRadius);
   height:300px;
   margin: auto;
+  margin-bottom: 5rem;
 }
+
 @media screen and (min-width:992px){
   .about-page{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px;
+    grid-template-columns: 3fr 1fr;
     align-items: center;
   }
   .about-img{
