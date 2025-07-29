@@ -843,6 +843,7 @@ Single rec
   color: white;
   padding: 0.1rem 0.5rem;
   margin: 0 0.3rem;
+  margin-bottom: 4px;
   text-transform: capitalize;
 }
 .rec-tags a:hover{
