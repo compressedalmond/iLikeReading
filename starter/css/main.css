@@ -147,7 +147,7 @@ End Toggle Button
 
 p {
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -156,7 +156,7 @@ h3,
 h4,
 h5 {
   margin: 0;
-  margin-bottom: 1.38rem;
+  margin-bottom: 1rem;
   font-family: var(--headingFont);
   font-weight: 400;
   line-height: 1.3;
@@ -795,7 +795,7 @@ Single rec
   max-width:280px;
   width: auto;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border-radius: var(--borderRadius);
   display: grid;
   box-shadow: 3px 4px 6px 0 #7dbbc3, 0 6px 10px 0 #7dbbc3;
@@ -831,8 +831,9 @@ Single rec
 .bookmark-icon i:hover{
   color: var(--primary-700);
 }
-.page h2{
+.page h3{
   font-weight: bold;
+  font-size: 40px;
   margin-left: 2.5rem;
 }
 
@@ -903,7 +904,7 @@ Single rec
 }
 @media screen and (min-width:992px) {
   .rec-content{
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 5fr 3fr;
   }
 }
 .single-summary header{
