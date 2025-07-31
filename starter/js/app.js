@@ -480,7 +480,8 @@ const books = [
 
     
 ];
-
+document.getElementById("idname")
+.addeventlistener("click",()=>{})
 
 const getElement = (selector) => {
   const element = document.querySelector(selector)
