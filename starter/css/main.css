@@ -80,12 +80,13 @@ Toggle Button
   position: absolute;
   top: 2rem;
   right: 6rem;
-  padding: 0.7rem 1rem;
+  padding: 0.9rem 0.8rem;
   cursor: pointer;
   background-color: var(--primary-800);
   border: none;
   border-radius: 10px;
   font-weight: bold;
+  margin-left:10px;
 }
 .toggle-btn:hover{
   background-color: var(--primary-400);
@@ -385,7 +386,7 @@ Navbar
   transition:var(--transition);
 }
 .show-links{
-  height:410px;
+  height:460px;
 
 }
 .nav-link{
@@ -395,7 +396,7 @@ Navbar
   letter-spacing: var(--letterSpacing);
   color: var(--grey-900);
   padding: 1rem 0;
-  margin: 20px;
+  margin: 15px;
   border-top: 1px solid var(--grey-500);
   transition: var(--transition);
 }
@@ -410,6 +411,10 @@ Navbar
   .nav-btn{
     display:none;
   }
+  .contact-link a{
+    padding:0.6rem 0.5rem;
+  }
+  
   .navbar{
     height:6rem;
   }
@@ -419,7 +424,7 @@ Navbar
   }
   .nav-header{
     height: auto;
-    margin-right: 2rem;
+    margin-right: 0rem;
   }
   .nav-links{
     height:auto;
@@ -430,7 +435,7 @@ Navbar
   .nav-link{
     padding: 0;
     border-top: none;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     font-size: 1rem;
   }
   .contact-link{
@@ -815,18 +820,30 @@ Single rec
   font-size: 30px;
   text-align: center;
 }
-.rec-icons{
+
+.bookmark-icon{
+  display: flex;
+  color: var(--primary-500);
+  justify-content: center;
+  font-size:1.9em;
+  margin: 0;
+}
+.bookmark-icon i:hover{
+  color: var(--primary-700);
+}
+
+
+.rec-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 2rem 0;
   text-align: center;
 }
-.rec-icons i{
+.rec-icons i {
   font-size:1.5rem;
   color: var(--primary-500);
   scale: 110%;
-  
 }
 .rec-icons h5, .rec-icons p {
   margin-bottom: 2px;

@@ -479,9 +479,7 @@ const books = [
 "comments": "", "tags": "" },
 
     
-]
-
-
+];
 
 
 const getElement = (selector) => {
