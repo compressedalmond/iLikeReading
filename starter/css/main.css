@@ -828,9 +828,8 @@ Single rec
   font-size:1.9em;
   margin: 0;
 }
-.bookmark-icon i:hover{
-  color: var(--primary-700);
-}
+
+
 
 
 .rec-icons {

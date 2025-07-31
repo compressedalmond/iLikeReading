@@ -602,19 +602,64 @@ if (window.location.href.includes("single-recipe")){
       document.getElementById("summary").innerText = book["summary"];
       document.getElementById("comments").innerText = book["comments"];
 
-      book["tags"].split(" ").forEach(tag => {
-        const tagLink = document.createElement("a");
-        tagLink.href = `tag-template.html?genre=${tag}`;
-        tagLink.innerText = tag.toLowerCase();
-        tagLink.innerText[0].toUpperCase();
+      if (book["tags"] !== ""){
+        book["tags"].split(" ").forEach(tag => {
+          const tagLink = document.createElement("a");
+          tagLink.href = `tag-template.html?genre=${tag}`;
+          tagLink.innerText = tag.toLowerCase();
+          tagLink.innerText[0].toUpperCase();
+          
 
-        tagsList.appendChild(tagLink);
-      });
+          tagsList.appendChild(tagLink);
+        });
+      }
+      
+
+      if (Object.keys(window.localStorage).includes(book["title"])){
+        window.localStorage.setItem(book["title"], "bookmarked")
+        document.getElementById("bookmarkIcon").className = "fa fa-bookmark"
+      }
+
+      document.getElementById("bookmarkIcon").addEventListener("click", () => {
+        if (Object.keys(window.localStorage).includes(book["title"])){
+          window.localStorage.removeItem(book["title"])
+          document.getElementById("bookmarkIcon").className = "far fa-bookmark"
+        }else{
+          window.localStorage.setItem(book["title"], "bookmarked")
+          document.getElementById("bookmarkIcon").className = "fa fa-bookmark"
+        }
+      })
 
       return;
     }
   });
+
+ 
 } 
+
+if (window.location.href.includes("bookmarked")){
+  books.forEach(book => {
+    if (Object.keys(window.localStorage).includes(book["title"])){
+      const master = document.getElementById("list");
+      
+      const atag = document.createElement("a");  
+      atag.href=`single-recipe.html?title=${book["title"]}`
+      const imagetag = document.createElement("img");  
+      const h5tag = document.createElement("h5"); 
+      const ptag = document.createElement("p");   
+      h5tag.innerText = book["title"];
+      ptag.innerText=book["type"]
+      imagetag.src=book["imageLink"]
+      imagetag.alt="book"
+      imagetag.className="img recipe-img"
+      atag.className="recipe"
+      atag.appendChild(imagetag)
+      atag.appendChild(h5tag)
+      atag.appendChild(ptag)
+      master.appendChild(atag);
+    }
+  });
+}
 
 function calcGenreAmount(){
   const usedGenres = {};
