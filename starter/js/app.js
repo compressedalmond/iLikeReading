@@ -798,9 +798,6 @@ const books = [
 { "title": "My Reason To Die", "imageLink": "https://meo.comick.pictures/aOXjNK.jpg", "type": "Manhwa | 100", "desc": "", "author": "Yuju", "dateOfRelease": "2021", "status": "Completed" ,
 "summary": "Ji-o’s luck runs out when she gets injured before the tryouts for the national taekwondo team. In the middle of facing what seems to be the biggest crisis of her life, she meets Gyeol, a mysterious boy who changes her life forever. He’s the definition of a bad boy with a good heart, and she finds herself unable to resist his charms. However, she might be playing with fire as he’s someone who’s involved with the wrong crowd. Is falling for Gyeol worth the risk?",
 "comments": "", "tags": "" },
-​​{ "title": "My School Life Pretending To Be A Worthless Person", "imageLink": "https://meo.comick.pictures/q0q6M.png", "type": "Manhwa | 120", "desc": "", "author": "Sand Fairy, Ppilippala", "dateOfRelease": "2022", "status": "Ongoing" ,
-"summary": "The world discovered the essence of the human soul, Ideia, and found a way to materialize it. The stronger one's Ideia, the more power one has. In a society where hierarchy is determined by this power, F-Rank Park Jinsung has always been his school's punching bag. In reality, though, he is an S-Rank with extreme bloodlust, which he has been hiding to keep others safe.",
-"comments": "", "tags": "" },
 { "title": "My Wife Is From A Thousand Years Ago", "imageLink": "https://meo.comick.pictures/w8J3WR.jpg", "type": "Manhua | 400", "desc": "", "author": "Yuewen Manhua", "dateOfRelease": "2022", "status": "Ongoing",
 "summary": "Jiang He, a girl from the Tang Dynasty, traveled through a thousand years and appeared in front of Xu Qing. Fate brought together this love that spanned a thousand years. Everything the girl was familiar with has become history. Relatives, friends, and enemies have all been left behind 1,200 years ago. The boy is unreserved and leads the girl to start a new life. Pain, confusion, cheers, and laughter will remain in this new world.",
 "comments": "", "tags": "" },
@@ -817,7 +814,11 @@ const books = [
 "summary": "Che is just a human in a world full of superpowered ‘Kimyos’, but he's determined to become the greatest fighter to ever live. When his beloved mentor is murdered, Che swears vengeance and embarks on a mission to unmask the killer. But soon Che learns that the world of Kimyos is much larger than he ever imagined, and that he himself might be one -- the most powerful Kimyo on Earth, with the power of the sun itself.",
 "comments": "", "tags": "" },
 
-];
+{"title":"My School Life Pretending To Be A Worthless Person","imageLink":"https://meo.comick.pictures/q0q6M.png","type":"Manhwa | 120", "desc":"", "author":"Sand Fairy, Ppilippala","dateOfRelease":"2022","status":"Ongoing",
+"summary":"The world discovered the essence of the human soul, Ideia, and found a way to materialize it. The stronger one's Ideia, the more power one has. In a society where hierarchy is determined by this power, F-Rank Park Jinsung has always been his school's punching bag. In reality, though, he is an S-Rank with extreme bloodlust, which he has been hiding to keep others safe.",
+"comments":"","tags":""},
+
+]
 
 
 const getElement = (selector) => {
