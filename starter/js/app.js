@@ -660,9 +660,9 @@ const books = [
 { "title": "Living As The Enemy Prince", "imageLink": "https://meo.comick.pictures/qNW5NM.jpg", "type": "Manhwa | 70", "desc": "", "author": "Ja Seo Hyeon", "dateOfRelease": "2023", "status": "Ongoing" ,
 "summary": "Killed in battle while defending his country, Bern wakes up in the body of the enemy prince, Kalian, and vows to avenge his people. But between taming an abusive half-brother and surviving his mother's deadly web of intrigue, sweet revenge seems to slip further beyond his grasp at every turn.",
 "comments": "", "tags": "" },
-{ "title": "Love Advice From The Great Duke Of Hell", "imageLink": "https://meo.comick.pictures/NrkKL1.jpg", "type": "Manhwa | 130", "desc": "", "author": "Unfins", "dateOfRelease": "2018", "status": "Completed" ,
+{ "title": "Love Advice From The Great Duke Of Hell", "imageLink": "https://meo.comick.pictures/NrkKL1.jpg", "type": "Manhwa | 130", "desc": "9/10", "author": "Unfins", "dateOfRelease": "2018", "status": "Completed" ,
 "summary": "The girl of your dreams barely knows you exist. Your friends can’t help. Your family is clueless. So where do you turn for love advice? Who can provide you with that essential assistance for the lovelorn? If you’re average everyday teenager Paul, you summon a powerful demon from deep in the recesses of Hell and frankly, hope for the best.",
-"comments": "", "tags": "" },
+"comments": "PLEASE read this it's so funny in the beginning and the story hits hard I finished in one night. Genuinely top 3 comedy for me", "tags": "comedy fantasy romance" },
 { "title": "Love Bullet", "imageLink": "https://meo.comick.pictures/GXZyNZ.jpg", "type": "Manga | 10", "desc": "", "author": "inee", "dateOfRelease": "2023", "status": "Ongoing" ,
 "summary": "Since the dawn of humanity, those who have never experienced love and meet an untimely end are granted a second chance at life as Cupids by the Goddess of Love. Present day Cupids have traded in their bow and arrow for modern firearms, but their mission remains the same: find suitable lovers for their targets and make them fall in love!",
 "comments": "", "tags": "" },
@@ -1049,6 +1049,7 @@ if (window.location.href.includes("single-recipe")){
     if(book["title"] === title){
       document.getElementById("title").innerText = book["title"];
       document.getElementById("imageRec").src = book["imageLink"];
+      document.getElementById("type").innerText = book["type"];
       document.getElementById("desc").innerText = book["desc"];
       document.getElementById("author").innerText = book["author"];
       document.getElementById("dateOfRelease").innerText = book["dateOfRelease"];
