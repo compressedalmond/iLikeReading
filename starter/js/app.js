@@ -342,7 +342,7 @@ const books = [
     "comments": "I used to love this one the little dog form was so cute, and I lowkey reread this too many times", "tags": "drama mystery action fantasy" },
 
 
-{ "title": "+99 Reinforced Wooden Stick", "imageLink": "https://meo.comick.pictures/vvRrl.jpg", "type": "Manhwa | 150", "desc": "", "author": "Hong-sil, Jiperi", "dateOfRelease": "2022", "status": "Ongoing" ,
+{ "title": "99 Reinforced Wooden Stick", "imageLink": "https://meo.comick.pictures/vvRrl.jpg", "type": "Manhwa | 150", "desc": "", "author": "Hong-sil, Jiperi", "dateOfRelease": "2022", "status": "Ongoing" ,
 "summary": "Welcome to “Chrono Life,” a virtual reality game where only the strongest survive. Ji-u logs in to “Chrono Life,” only to be ignored and ridiculed by the other players for his lack of experience, crappy items, and being an overall noob. But when he upgrades his wooden stick to the max reinforcement level of +99, Ji-u realizes he has the power to split continents and slay armies of thousands in just one swing." ,
 "comments": "", "tags": "" },
 { "title": "4 Cut Hero", "imageLink": "https://meo.comick.pictures/k8bGz.jpg", "type": "Manhwa | 250", "desc": "", "author": "Gojira-kun", "dateOfRelease": "2014", "status": "Completed" ,

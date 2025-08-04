@@ -110,6 +110,7 @@ body.dark a{
 body.dark a:hover{
   color: var(--grey-200);
 }
+body.dark
 body.dark nav a ,body.dark .rec-tags a, body.dark .btn{
   color: floralwhite;
 }
@@ -123,7 +124,7 @@ body.dark footer{
   color:#aaa;
   border-top: 1px solid #333;
 }
-body.dark h5, body.dark p{
+body.dark h5, body.dark p,  body.dark .type{
   color: floralwhite;
 }
 
