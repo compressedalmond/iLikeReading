@@ -110,9 +110,14 @@ body.dark a{
 body.dark a:hover{
   color: var(--grey-200);
 }
-body.dark
+body.dark #desc{
+  color: var(--primary-800);
+}
 body.dark nav a ,body.dark .rec-tags a, body.dark .btn{
   color: floralwhite;
+}
+body.dark #author, body.dark #dateOfRelease, body.dark #status{
+  color: var(--grey-200);
 }
 body.dark .hero-container{
   background: rgba(0, 0, 0, 0.1);
@@ -124,7 +129,7 @@ body.dark footer{
   color:#aaa;
   border-top: 1px solid #333;
 }
-body.dark h5, body.dark p,  body.dark .type{
+body.dark h5, body.dark p, body.dark .type{
   color: floralwhite;
 }
 
@@ -576,7 +581,7 @@ Reads
 .recipe-img {
   height: 30rem;
   width:auto;
-  max-width: 300px;
+  max-width: 310px;
   margin:auto;
   border-radius:10px;
   margin-bottom: 0.8rem;
@@ -619,7 +624,7 @@ Reads
   .recipe-img {
     height: 20rem;
     width: auto;
-    max-width: 200px;
+    max-width: 210px;
   }
 }
 @media screen and (min-width: 900px) {
